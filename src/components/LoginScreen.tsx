@@ -162,7 +162,7 @@ export const LoginScreen: React.FC<Props> = ({
       {/* Footer */}
       <div className="text-center text-xs text-slate-400 max-w-xs mx-auto space-y-1 pb-2">
         <p className="font-semibold text-slate-300">
-          Desarrollado por <span className="text-emerald-400 font-bold">taller it</span>
+          Desarrollado por <span className="text-emerald-400 font-bold">@taller_it_</span>
         </p>
         <p className="text-[10px] text-slate-500">
           Mar del Plata, Argentina
