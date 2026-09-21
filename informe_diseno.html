@@ -8,7 +8,7 @@
 
     @page {
       size: A4;
-      margin: 18mm 16mm 18mm 16mm;
+      margin: 16mm 16mm 16mm 16mm;
     }
 
     * {
@@ -20,8 +20,8 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: #1e293b;
-      line-height: 1.45;
-      font-size: 11.5px;
+      line-height: 1.5;
+      font-size: 11px;
       margin: 0;
       padding: 0;
       background: #ffffff;
@@ -41,7 +41,7 @@
     }
 
     .banner-title {
-      font-size: 23px;
+      font-size: 24px;
       font-weight: 900;
       letter-spacing: -0.03em;
       margin: 0 0 6px 0;
@@ -85,7 +85,7 @@
       font-size: 12px;
       color: #334155;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       text-align: justify;
     }
 
@@ -100,7 +100,7 @@
     .metric-card {
       border: 1px solid #e2e8f0;
       border-radius: 10px;
-      padding: 14px 14px 12px 14px;
+      padding: 14px;
       background: #ffffff;
       box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
@@ -127,7 +127,7 @@
       font-weight: 800;
       color: #0f172a;
       letter-spacing: -0.02em;
-      margin: 22px 0 10px 0;
+      margin: 20px 0 12px 0;
       padding-bottom: 5px;
       border-bottom: 1.5px solid #0f172a;
     }
@@ -140,22 +140,22 @@
     }
 
     .key-value-table td {
-      padding: 8px 10px;
+      padding: 10px 12px;
       border-bottom: 1px solid #f1f5f9;
       font-size: 11px;
       vertical-align: top;
     }
 
     .key-value-table td.key-col {
-      width: 24%;
+      width: 25%;
       font-weight: 700;
       color: #0f172a;
     }
 
     .key-value-table td.val-col {
-      width: 76%;
+      width: 75%;
       color: #334155;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* AUDIT TABLE */
@@ -173,13 +173,13 @@
       font-size: 9.5px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      padding: 8px 10px;
+      padding: 9px 12px;
       border-bottom: 2px solid #cbd5e1;
       text-align: left;
     }
 
     .data-table td {
-      padding: 7px 10px;
+      padding: 8.5px 12px;
       border-bottom: 1px solid #e2e8f0;
       vertical-align: middle;
       color: #334155;
@@ -193,7 +193,7 @@
       background: #ecfdf5;
       color: #065f46;
       border: 1px solid #a7f3d0;
-      padding: 2px 7px;
+      padding: 2.5px 8px;
       border-radius: 5px;
       font-size: 9.5px;
       font-weight: 700;
@@ -207,7 +207,7 @@
       border-left: 4px solid #059669;
       padding: 12px 14px;
       border-radius: 0 8px 8px 0;
-      margin: 16px 0;
+      margin: 14px 0;
       font-size: 11px;
       line-height: 1.55;
       color: #334155;
@@ -225,38 +225,30 @@
 
     .page-break {
       page-break-before: always;
+      break-before: page;
     }
 
     /* FOOTER */
     .doc-footer {
-      margin-top: 24px;
-      padding-top: 10px;
+      margin-top: 30px;
+      padding-top: 12px;
       border-top: 1px solid #e2e8f0;
       display: flex;
       justify-content: space-between;
       font-size: 9.5px;
       color: #64748b;
     }
-
-    .code-snippet {
-      background: #0f172a;
-      color: #f8fafc;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 10px;
-      padding: 10px 14px;
-      border-radius: 8px;
-      line-height: 1.6;
-      margin: 8px 0;
-    }
   </style>
 </head>
 <body>
+
+  <!-- ================= PÁGINA 1 ================= -->
 
   <!-- TOP BANNER -->
   <div class="top-banner">
     <div>
       <h1 class="banner-title">Mar del Trote · Plataforma PWA</h1>
-      <p class="banner-subtitle">Auditoría funcional, arquitectura de software y hoja de ruta técnica · 21/09/2026</p>
+      <p class="banner-subtitle">Auditoría funcional, arquitectura de software y propuesta de valor · 21/09/2026</p>
     </div>
     <div class="banner-badge">
       <span class="banner-badge-title">MAR DEL TROTE</span>
@@ -266,7 +258,7 @@
 
   <!-- INTRODUCTORY PARAGRAPH -->
   <p class="lead-text">
-    La plataforma <strong>Mar del Trote</strong> fue concebida para centralizar la información dispersa entre Google Drive, conversaciones de WhatsApp y notas personales, resolviendo la carga operativa sin deshumanizar la planificación. El sistema opera como copiloto inteligente: calcula asistencias, prepara borradores semanales adaptados a las condiciones de Mar del Plata y semaforiza cobros, conservando en la entrenadora la decisión final sobre progresión, seguridad y acompañamiento personal.
+    La plataforma <strong>Mar del Trote</strong> fue concebida para centralizar la información dispersa entre carpetas de Google Drive, conversaciones de WhatsApp y notas personales, resolviendo la sobrecarga operativa sin deshumanizar la planificación. El sistema opera como un copiloto inteligente: calcula asistencias, prepara borradores semanales adaptados a las condiciones de Mar del Plata y semaforiza cobros, conservando en la entrenadora la decisión final sobre progresión, seguridad y acompañamiento personal.
   </p>
 
   <!-- 4 STAT METRICS CARDS -->
@@ -289,7 +281,7 @@
     </div>
   </div>
 
-  <!-- SECTION 1: TIEMPO Y PILARES -->
+  <!-- SECTION 1: PILARES OPERATIVOS -->
   <div class="section-title">1. Pilares Operativos y Filosofía de Automatización</div>
   <table class="key-value-table">
     <tr>
@@ -310,15 +302,29 @@
     </tr>
   </table>
 
+  <!-- FOOTER PÁGINA 1 -->
+  <div class="doc-footer">
+    <div>Mar del Trote 1.0.0 · 21/09/2026 · Mar del Plata, Argentina</div>
+    <div><strong>Desarrollado por @taller_it_</strong></div>
+  </div>
+
+
+  <!-- ================= PÁGINA 2 ================= -->
+  <div class="page-break"></div>
+
   <!-- SECTION 2: AUDITORÍA DE FUNCIONALIDADES -->
   <div class="section-title">2. Auditoría Completa de Requerimientos Solicitados</div>
+  <p style="color: #475569; font-size: 11px; margin-bottom: 12px;">
+    Estado de implementación de cada una de las funcionalidades acordadas durante el relevamiento y diseño:
+  </p>
+
   <table class="data-table">
     <thead>
       <tr>
         <th style="width: 25%;">Requerimiento</th>
         <th style="width: 17%;">Origen</th>
-        <th style="width: 15%;">Estado</th>
-        <th style="width: 43%;">Implementación en la Aplicación</th>
+        <th style="width: 16%;">Estado</th>
+        <th style="width: 42%;">Implementación en la Aplicación</th>
       </tr>
     </thead>
     <tbody>
@@ -397,7 +403,14 @@
     </tbody>
   </table>
 
-  <!-- PAGE BREAK -->
+  <!-- FOOTER PÁGINA 2 -->
+  <div class="doc-footer">
+    <div>Mar del Trote 1.0.0 · 21/09/2026 · Mar del Plata, Argentina</div>
+    <div><strong>Desarrollado por @taller_it_</strong></div>
+  </div>
+
+
+  <!-- ================= PÁGINA 3 ================= -->
   <div class="page-break"></div>
 
   <!-- SECTION 3: BASE DE DATOS -->
@@ -421,13 +434,38 @@
     </ul>
   </div>
 
-  <!-- SECTION 4: RESUMEN Y CONCLUSIÓN -->
-  <div class="section-title">4. Conclusión y Resumen Ejecutivo</div>
-  <div class="callout-box" style="border-left-color: #065f46; background: #ecfdf5;">
-    <strong>En resumen:</strong> Mar del Trote cuenta con una solución PWA lista para operar, con los 3 caminos integrados, planificador tri-modalidad asistido por criterio de la entrenadora, radar climático costero de Mar del Plata, semáforo de cobranzas y comunicación por WhatsApp con un solo clic. El sistema está preparado para conectarse a base de datos en la nube cuando se decida abrir a todos los alumnos.
+  <!-- SECTION 4: INVERSIÓN Y BENEFICIOS -->
+  <div class="section-title">4. Inversión y Beneficios Operativos</div>
+  
+  <div class="callout-box" style="border-left-color: #065f46; background: #ecfdf5; margin-bottom: 12px;">
+    <p style="margin: 0 0 6px 0; font-size: 13px;">
+      <strong>Inversión por Desarrollo Total y Despliegue Final:</strong> 
+      <span style="font-size: 14px; color: #064e3b; font-weight: 800;">$300.000 ARS</span> 
+      <span style="font-size: 11px; color: #047857; font-weight: 600;">(posibilidad de pago en cuotas)</span>
+    </p>
+    <p style="margin: 0; color: #334155; font-size: 10.5px; line-height: 1.5;">
+      Abarca el desarrollo integral de la plataforma a medida, incorporación de mejoras y correcciones personalizadas, y la puesta en marcha definitiva en la nube lista para usar con los alumnos.
+    </p>
   </div>
 
-  <!-- FOOTER -->
+  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+    <strong style="font-size: 11px; color: #0f172a; display: block; margin-bottom: 6px;">Beneficios Clave para la Entrenadora:</strong>
+    <ul style="margin: 0; padding-left: 16px; line-height: 1.6; color: #334155; font-size: 10.5px;">
+      <li><strong>Ahorro masivo de tiempo semanal:</strong> Elimina la reconstrucción manual de rutinas en Drive o WhatsApp; el sistema prepara los borradores en segundos respetando el criterio de la entrenadora.</li>
+      <li><strong>Control de cobros sin fricción:</strong> El semáforo visual evita demoras y cuotas vencidas, permitiendo enviar recordatorios cordiales por WhatsApp con datos bancarios en un solo clic.</li>
+      <li><strong>Adaptabilidad climática inmediata:</strong> Ante lluvia o viento fuerte en la costa marplatense, permite cambiar las clases presenciales a Zoom y avisar al grupo al instante sin perder estímulos.</li>
+      <li><strong>Ficha 360° centralizada:</strong> Todo el historial médico, lesiones, disponibilidad horaria, materiales en casa y progreso nutricional en un único lugar accesible desde cualquier dispositivo.</li>
+      <li><strong>Imagen y fidelización:</strong> Proyecta una identidad profesional y de alto nivel que fortalece el compromiso de los alumnos y potencia el asesoramiento de nutrición Herbalife.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 5: CONCLUSIÓN -->
+  <div class="section-title">5. Conclusión</div>
+  <div class="callout-box" style="border-left-color: #065f46; background: #f8fafc;">
+    <strong>En síntesis:</strong> Mar del Trote dispone de una herramienta tecnológica diseñada a su medida, que profesionaliza la gestión diaria, protege la salud de los alumnos mediante un seguimiento riguroso y le devuelve horas libres a la entrenadora para enfocarse en lo más valioso: entrenar y motivar.
+  </div>
+
+  <!-- FOOTER PÁGINA 3 -->
   <div class="doc-footer">
     <div>Mar del Trote 1.0.0 · 21/09/2026 · Mar del Plata, Argentina</div>
     <div><strong>Desarrollado por @taller_it_</strong></div>
