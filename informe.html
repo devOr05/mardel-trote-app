@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Informe Técnico y Funcional - Mar del Trote PWA</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      line-height: 1.5;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    .header {
+      border-bottom: 3px solid #059669;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .logo-container h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 900;
+      color: #064e3b;
+      letter-spacing: -0.5px;
+    }
+    .logo-container p {
+      margin: 2px 0 0 0;
+      font-size: 12px;
+      font-weight: 600;
+      color: #059669;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .doc-meta {
+      text-align: right;
+      font-size: 11px;
+      color: #64748b;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .badge-success { background: #d1fae5; color: #065f46; }
+    .badge-info { background: #e0f2fe; color: #0369a1; }
+    .badge-warn { background: #fef3c7; color: #92400e; }
+
+    h2 {
+      font-size: 16px;
+      color: #0f172a;
+      border-left: 4px solid #059669;
+      padding-left: 8px;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h3 {
+      font-size: 14px;
+      color: #1e293b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    p, li {
+      color: #334155;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 11.5px;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f8fafc;
+      color: #1e293b;
+      font-weight: 700;
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    .card-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 12px 0;
+    }
+    .footer {
+      margin-top: 30px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #64748b;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .highlight-brand {
+      color: #059669;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <div class="header">
+    <div class="logo-container">
+      <h1>MAR DEL TROTE</h1>
+      <p>Entrenamiento Running & Nutrición Herbalife • Mar del Plata</p>
+    </div>
+    <div class="doc-meta">
+      <strong>Informe Técnico y Funcional v1.0</strong><br>
+      Fecha: Septiembre 2026<br>
+      Estado: <span class="badge badge-success">Sistema Operativo</span>
+    </div>
+  </div>
+
+  <!-- RESUMEN EJECUTIVO -->
+  <h2>1. Resumen Ejecutivo</h2>
+  <p>
+    El presente documento detalla la implementación y arquitectura de la plataforma web progresiva (<strong>PWA</strong>) de <strong>Mar del Trote</strong>. La solución resuelve la dispersión de datos entre Google Drive, WhatsApp y notas dispersas, centralizando la gestión de alumnos, pagos y seguimiento sin sustituir el criterio clínico y artesanal de la entrenadora.
+  </p>
+  <div class="card-box">
+    <strong>Premisa de Diseño:</strong> La aplicación actúa como un <em>copiloto inteligente</em> que prepara borradores de rutinas, detecta alertas de clima en la costa marplatense y semaforiza cobros, mientras que la entrenadora conserva la autorización final sobre progresiones, cargas y trato humano.
+  </div>
+
+  <!-- MATRIZ DE FUNCIONALIDADES -->
+  <h2>2. Auditoría Completa de Funcionalidades Solicitadas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Módulo / Requerimiento</th>
+        <th style="width: 15%;">Origen</th>
+        <th style="width: 15%;">Estado</th>
+        <th style="width: 45%;">Detalle Técnico y Operativo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>3 Caminos de Ingreso</strong></td>
+        <td>Requerimiento inicial</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>1. Solo Entrenamiento • 2. Entreno + Nutrición • 3. Solo Nutrición. Segmentación en onboarding y fichas.</td>
+      </tr>
+      <tr>
+        <td><strong>Ficha Única 360°</strong></td>
+        <td>Requerimiento inicial</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Datos antropométricos, zonas MDP, disponibilidad, materiales en casa, historial clínico y apto físico.</td>
+      </tr>
+      <tr>
+        <td><strong>Plan Tri-Modalidad</strong></td>
+        <td>Proceso actual (Paso 7)</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Generación simultánea de versión <em>Presencial</em> (costa/parque), <em>Zoom</em> (casa guiada) y <em>En Casa / Distancia</em>.</td>
+      </tr>
+      <tr>
+        <td><strong>Generador de Borradores</strong></td>
+        <td>Requerimiento inicial</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Algoritmo que evalúa la semana previa: si hubo molestia baja impacto a pasto/isometría; si completó con alta energía progresa volumen.</td>
+      </tr>
+      <tr>
+        <td><strong>Portal Alumno sin Login</strong></td>
+        <td>Pregunta 2</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Acceso instantáneo mediante token único en URL (vía WhatsApp). Selector de modalidad y tarjetas de sesión claras.</td>
+      </tr>
+      <tr>
+        <td><strong>Feedback Post-Entreno</strong></td>
+        <td>Proceso actual (Paso 5)</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Encuesta rápida (energía 1-10, escala RPE, reporte de dolores y balance fácil/difícil) con celebración confeti.</td>
+      </tr>
+      <tr>
+        <td><strong>Radar Climático MDP</strong></td>
+        <td>Pregunta 4</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Consulta en vivo API Open-Meteo de Mar del Plata (viento km/h y lluvia %). Botón "Simular Sudestada" y switch a Zoom.</td>
+      </tr>
+      <tr>
+        <td><strong>Semáforo de Pagos</strong></td>
+        <td>Pregunta 5</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Clasificación visual: 🟢 Al día, 🟡 Por vencer (5 días) y 🔴 Vencido. Registro de cobros y montos en 1 clic.</td>
+      </tr>
+      <tr>
+        <td><strong>Integración WhatsApp (v1)</strong></td>
+        <td>Pregunta 3 (Opción A)</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Enlaces directos sin costo (wa.me) con textos prearmados: envío de rutina, pase a Zoom por clima y cobro con CBU/Alias.</td>
+      </tr>
+      <tr>
+        <td><strong>Nutrición Herbalife</strong></td>
+        <td>Pregunta 1</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Cuestionario de hábitos, ingesta de agua, asignación de suplementos (F1, Proteína, Té, Aloe) y control de peso.</td>
+      </tr>
+      <tr>
+        <td><strong>PWA con Botón en Login</strong></td>
+        <td>Pedido puntual</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Web App Manifest, Service Worker offline y botón "Instalar App" con detector para Android, PC y guía para iOS.</td>
+      </tr>
+      <tr>
+        <td><strong>Firma 'Desarrollado por taller it'</strong></td>
+        <td>Pedido puntual</td>
+        <td><span class="badge badge-success">Completado</span></td>
+        <td>Ubicada exclusivamente en el pie de la pantalla de bienvenida/login.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- PREGUNTA CRUCIAL: ¿NECESITAMOS UNA BASE DE DATOS? -->
+  <h2>3. ¿Necesitamos una Base de Datos?</h2>
+  <p>
+    Esta es una decisión técnica y operativa fundamental para el crecimiento del proyecto. La respuesta depende de cómo se use la aplicación en el día a día:
+  </p>
+
+  <div class="card-box">
+    <h3>Estado Actual: Base de Datos Local (localStorage / PWA Offline)</h3>
+    <ul>
+      <li><strong>Cómo funciona hoy:</strong> Toda la información de alumnos, planes y feedbacks se guarda en la memoria del navegador en el dispositivo donde se usa.</li>
+      <li><strong>Ventajas:</strong> Es instantánea, funciona 100% sin conexión a internet (ideal en la costa), no requiere servidores ni genera ningún costo mensual de mantenimiento.</li>
+      <li><strong>Limitación clave:</strong> Si vos modificás un plan en tu computadora, ese cambio <em>no viaja automáticamente</em> al teléfono del alumno a menos que ambos compartan una base centralizada en la nube.</li>
+    </ul>
+  </div>
+
+  <div class="card-box" style="border-left: 4px solid #0ea5e9;">
+    <h3>Para Operar en Producción Real: SÍ, se recomienda Base de Datos en la Nube</h3>
+    <p>
+      Para que el alumno complete su check-in en su casa y a vos te aparezca inmediatamente en tu panel, ambos dispositivos deben hablar con una base de datos central.
+    </p>
+    <p><strong>Solución recomendada (100% Gratuita para empezar): <span class="highlight-brand">Supabase</span> (PostgreSQL)</strong></p>
+    <ul>
+      <li><strong>Costo:</strong> $0 / mes en su plan gratuito (permite hasta 500 MB de datos y 50.000 usuarios activos, más que sobrado para Mar del Trote).</li>
+      <li><strong>Tiempo Real:</strong> En cuanto un alumno envía su feedback, la pantalla de la entrenadora se actualiza en vivo.</li>
+      <li><strong>Seguridad:</strong> Copias de seguridad automáticas diarias. Si cambiás de teléfono o computadora, nunca perdés una sola ficha.</li>
+    </ul>
+  </div>
+
+  <!-- CONTROL DE VERSIONES Y REPOSITORIO GIT -->
+  <h2>4. Control de Versiones y Repositorio Git</h2>
+  <p>
+    El código fuente completo de la aplicación se encuentra inicializado con <strong>Git</strong> en tu equipo local:
+  </p>
+  <ul>
+    <li><strong>Ruta Local:</strong> <code>C:\Users\kavay\.gemini\antigravity\scratch\mardel-trote-pwa</code></li>
+    <li><strong>Rama Principal:</strong> <code>master</code> (con commit inicial registrado y verificado).</li>
+    <li><strong>Para vincularlo a GitHub / GitLab:</strong> Solo necesitas crear un repositorio vacío en tu cuenta de GitHub (ej: <em>mardel-trote-app</em>) y ejecutar en la terminal:</li>
+  </ul>
+  <div class="card-box" style="background:#1e293b; color:#e2e8f0; font-family:Consolas, monospace; font-size:11px;">
+    git remote add origin https://github.com/TU_USUARIO/mardel-trote-app.git<br>
+    git branch -M main<br>
+    git push -u origin main
+  </div>
+
+  <!-- HOJA DE RUTA -->
+  <h2>5. Hoja de Ruta Sugerida (Siguientes Pasos)</h2>
+  <ol>
+    <li><strong>Paso 1 (Actual):</strong> Validar el uso diario de la interfaz, el planificador semanal y la respuesta de los alumnos con los links de WhatsApp.</li>
+    <li><strong>Paso 2:</strong> Conectar la base de datos Supabase para sincronización en la nube multi-dispositivo.</li>
+    <li><strong>Paso 3 (Opcional):</strong> Incorporar exportación de rutinas a PDF descargable y gráfico de evolución de peso.</li>
+  </ol>
+
+  <!-- PIE DE PÁGINA -->
+  <div class="footer">
+    <div>Mar del Trote • Plataforma Integral de Entrenamiento y Nutrición</div>
+    <div><strong>Desarrollado por taller it</strong></div>
+  </div>
+
+</body>
+</html>
