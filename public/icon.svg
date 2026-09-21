@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Circle/Square -->
+  <rect width="512" height="512" rx="128" fill="url(#grad)" />
+  
+  <!-- Ocean waves at bottom -->
+  <path d="M0 400 Q 128 360 256 400 T 512 400 L 512 512 L 0 512 Z" fill="#ffffff" opacity="0.15" />
+  <path d="M0 435 Q 128 405 256 435 T 512 435 L 512 512 L 0 512 Z" fill="#ffffff" opacity="0.25" />
+
+  <!-- Runner Icon in White -->
+  <g fill="#ffffff" transform="translate(60, 45) scale(0.75)">
+    <!-- Head -->
+    <circle cx="330" cy="110" r="45" />
+    <!-- Torso and Limbs -->
+    <path d="M290 170 C270 170 250 185 240 205 L170 310 C160 325 165 345 180 355 C195 365 215 360 225 345 L270 270 L300 315 L220 440 C210 455 215 475 230 485 C245 495 265 490 275 475 L355 350 C365 335 365 315 350 300 L325 260 L360 230 L425 260 C440 270 460 265 470 250 C480 235 475 215 460 205 L385 170 C355 155 315 155 290 170 Z" />
+    <!-- Trailing dynamic speed lines -->
+    <line x1="80" y1="220" x2="160" y2="220" stroke="#ffffff" stroke-width="16" stroke-linecap="round" opacity="0.6" />
+    <line x1="40" y1="270" x2="130" y2="270" stroke="#ffffff" stroke-width="16" stroke-linecap="round" opacity="0.8" />
+    <line x1="90" y1="320" x2="150" y2="320" stroke="#ffffff" stroke-width="16" stroke-linecap="round" opacity="0.5" />
+  </g>
+</svg>
